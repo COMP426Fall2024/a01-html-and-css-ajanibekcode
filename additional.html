@@ -32,7 +32,7 @@
             <tr>
                 <td>Video Game</td>
                 <td>Another video game Amaterasu appears in is <em>Smite</em>, a mutliplayer online battle area (MOBA) game. Her abilities focus on providing light and power to her allies while damaging and blinding the enemy.</td>
-                <td><img src="images/smite.jpg" /></td>
+                <td><img src="images/smite.jpg" alt="smite"/></td>
             </tr>
             <tr>
                 <td>Anime/Manga</td>
@@ -42,36 +42,36 @@
             <tr>
                 <td>Anime/Manga</td>
                 <td>In the manga <em>One Piece</em>, Amaterasu is referenced through Admiral Kizaru, whose Devil Fruit power allows him to move at the speed of light, and although not a direct reference, the theme of light and sun is an indirect reference to the goddess.</td>
-                <td><img src="images/kizaru.jpg" /></td>
+                <td><img src="images/kizaru.jpg" alt="kizaru"/></td>
             </tr>
         </table>
+
+    <h3>Did you find the Easter Egg?</h3>
+    <p>Select the correct answer!</p>
+
+    <select id="egg" onchange="check()">
+        <option value="default" selected disabled>Select an answer</option>
+        <option value="incorrect">Page not Found</option>
+        <option value="correct">The titles of the pages equate to "I love UNC CS!"</option>
+        <option value="incorrect">There is no secret egg!</option>
+    </select>
     </main>
-</body>
+    <script>
+        function check(){
+            // retrieve select element and value selected by user
+            const selectedBox = document.getElementById('egg');
+            const selectedValue = selectedBox.value;
 
-<h3>Did you find the Easter Egg?</h3>
-<p>Select the correct answer!</p>
-
-<select id="egg" onchange="check()">
-    <option value="default" selected disabled>Select an answer</option>
-    <option value="incorrect">Page not Found</option>
-    <option value="correct">The titles of the pages equate to "I love UNC CS!"</option>
-    <option value="incorrect">There is no secret egg!</option>
-</select>
-
-<script>
-    function check(){
-        // retrieve select element and value selected by user
-        const selectedBox = document.getElementById('egg');
-        const selectedValue = selectedBox.value;
-
-        if (selectedValue == 'correct'){
-            selectedBox.style.backgroundColor = 'green';
-            selectedBox.style.color = 'white';
+            if (selectedValue == 'correct'){
+                selectedBox.style.backgroundColor = 'green';
+                selectedBox.style.color = 'white';
+            }
+            else{
+                // reset for incorrect
+                selectedBox.style.backgroundColor = 'red';
+                selectedBox.style.color = 'white';
+            }   
         }
-        else{
-            // reset for incorrect
-            selectedBox.style.backgroundColor = 'red';
-            selectedBox.style.color = 'white';
-        }   
-    }
-</script>
+    </script>
+    </body>
+</html>

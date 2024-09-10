@@ -39,10 +39,9 @@
             </section>
             <section>
                 <h3>Amaterasu's Potential Visual Character in League of Legends</h3>
-                <img src="images/league_skin.jpg"/>
+                <img src="images/league_skin.jpg" alt="league_skin"/>
             </section>
-        </main>
-    </body>
+
     <h3>Check out potential laning roles for Amaterasu!</h3>
     <select id="roles" onchange="roleSelect()">
         <option value="default" selected disabled>Choose a lane</option>
@@ -52,7 +51,7 @@
     </select>
 
     <p id="roleDetails"></p>
-
+    </main>
     <script>
         function roleSelect(){
             const role = document.getElementById("roles").value;
@@ -69,4 +68,5 @@
             }
         }
     </script>
+    </body>
 </html>
