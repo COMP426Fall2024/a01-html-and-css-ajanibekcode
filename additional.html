@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>UNC CS!</title>
+</head>
+<body>
+    <header>
+        <h1>Amaterasu - Goddess of the Sun</h1>
+        <nav>
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='league.html'>Amaterasu as a Character</a></li>
+                <li><a href='additional.html'>Additional Information</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>References to Amaterasu in Media</h1>
+        <table>
+            <tr>
+                <th>Media Type</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>Video Game</td>
+                <td>One could argue is one of the most famous portrayals, Amaterasu is the main character of the game <em>Okami</em> (2006). The game follows her journey of restoring life to the world by battling evil forces.</td>
+                <td><img src="images/okami.jpg" alt="okami" /></td>
+            </tr>
+            <tr>
+                <td>Video Game</td>
+                <td>Another video game Amaterasu appears in is <em>Smite</em>, a mutliplayer online battle area (MOBA) game. Her abilities focus on providing light and power to her allies while damaging and blinding the enemy.</td>
+                <td><img src="images/smite.jpg" /></td>
+            </tr>
+            <tr>
+                <td>Anime/Manga</td>
+                <td>Did you know? In the <em>Naruto</em> series, a powerful technique used by characters Itachi Uchiha and Sasuke Uchiha is called Amaterasu, a visual representation of the sun goddess's immense and fearsome strength, which is reflected by the technique's black flames that can reduce anything to ash.</td>
+                <td><img src="images/naruto.jpg" alt="naruto"/></td>
+            </tr>
+            <tr>
+                <td>Anime/Manga</td>
+                <td>In the manga <em>One Piece</em>, Amaterasu is referenced through Admiral Kizaru, whose Devil Fruit power allows him to move at the speed of light, and although not a direct reference, the theme of light and sun is an indirect reference to the goddess.</td>
+                <td><img src="images/kizaru.jpg" /></td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<h3>Did you find the Easter Egg?</h3>
+<p>Select the correct answer!</p>
+
+<select id="egg" onchange="check()">
+    <option value="default" selected disabled>Select an answer</option>
+    <option value="incorrect">Page not Found</option>
+    <option value="correct">The titles of the pages equate to "I love UNC CS!"</option>
+    <option value="incorrect">There is no secret egg!</option>
+</select>
+
+<script>
+    function check(){
+        // retrieve select element and value selected by user
+        const selectedBox = document.getElementById('egg');
+        const selectedValue = selectedBox.value;
+
+        if (selectedValue == 'correct'){
+            selectedBox.style.backgroundColor = 'green';
+            selectedBox.style.color = 'white';
+        }
+        else{
+            // reset for incorrect
+            selectedBox.style.backgroundColor = 'red';
+            selectedBox.style.color = 'white';
+        }   
+    }
+</script>

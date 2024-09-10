@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="utf-8">
+        <title>Love</title>
+    </head>
+    <body>
+        <header>
+            <h1>What would Amaterasu be as a League of Legends character?</h1>
+            <nav>
+                <ul>
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href='league.html'>Amaterasu as a Character</a></li>
+                    <li><a href='additional.html'>Additional Information</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <p>Amaterasu, the Radiant Sun Goddess, would fit the role of a mage that would cause terror in the summoner rift. Below is a table of her potential abilties and power.</p>
+                <table>
+                    <tr>
+                        <th>Passive</th>
+                        <th>Q (7 sec cooldown)</th>
+                        <th>W (5 sec cooldown)</th>
+                        <th>E (15 sec cooldown)</th>
+                        <th>Ultimate (2:30 min cooldown)</th>
+                    </tr>
+                    <tr>
+                        <td>Radiant Presence: Empowers allies by giving nearby allies bonus attack speed and health regeneration. 
+                        </td>
+                        <td>Solar Flare: Amaterasu sends out a beam of concentrated sunlight in a straight line, dealing magic damage to enemy champions that are hit.</td>
+                        <td>Sun's Blessing: Can heal either herself or nearby allies. Healing nearby allies grants her a temporary shield that protects her from stuns.</td>
+                        <td>Dawn's Light: A short distance dash that leaves a trail of light, enemies who cross the trail are slowed for a few seconds.</td>
+                        <td>Divine Radiance: Grants the ability to live a few seconds more, the same effect as Zhonya's Hourglass, and nearby allies within a small radius are granted this ability also. This is known as a time stop, rendering one untargetable and invulnerable for a short duration. However, the champion is unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3>Amaterasu's Potential Visual Character in League of Legends</h3>
+                <img src="images/league_skin.jpg"/>
+            </section>
+        </main>
+    </body>
+    <h3>Check out potential laning roles for Amaterasu!</h3>
+    <select id="roles" onchange="roleSelect()">
+        <option value="default" selected disabled>Choose a lane</option>
+        <option value="support">Support</option>
+        <option value="top">Top</option>
+        <option value="mid">Mid</option>
+    </select>
+
+    <p id="roleDetails"></p>
+
+    <script>
+        function roleSelect(){
+            const role = document.getElementById("roles").value;
+            const roleDetails = document.getElementById("roleDetails");
+
+            if (role == "support"){
+                roleDetails.textContent = "Amaterasu would be a highly efficient support by her constant healing, shielding, and magic damage in the bottom lane."
+            } else if (role == "mid"){
+                roleDetails.textContent = "Amaterasu would fit the playstyle of champions like Syndra and Orianna, providing high magic burst damage in addition with the mobility of the likes of a champion like Smolder."
+            } else if (role == "top"){
+                roleDetails.textContent = "Amaterasu would be a nightmare to lane against in the top lane, constantly poking her enemy making the game unplayable for the opponent while also having mobility that would make it hard for enemy jungle to gank."
+            } else {
+                roleDetails.textContent = "";
+            }
+        }
+    </script>
+</html>
